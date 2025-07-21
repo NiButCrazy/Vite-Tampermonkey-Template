@@ -3,7 +3,10 @@ import { defineConfig } from 'vite';
 import monkey, { cdn } from 'vite-plugin-monkey';
 import { resolve } from "path";
 
-// https://vitejs.dev/config/
+// 设置使用的浏览器
+process.env.BROWSER = 'chrome';
+
+// https://cn.vitejs.dev/config/
 export default defineConfig({
   css: {
     modules: {
