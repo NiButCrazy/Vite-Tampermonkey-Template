@@ -9,21 +9,23 @@
     "version": "nbc-auto-changelog -p && git add CHANGELOG.md"
   },
   "pnpm": {
-    "onlyBuiltDependencies": ["esbuild"]
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
   },
   "dependencies": {
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },
   "devDependencies": {
-    "less": "^4.3.0",
     "@types/node": "^24.0.6",
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
     "@vitejs/plugin-react": "^4.4.0",
+    "less": "^4.3.0",
+    "nbc-auto-changelog": "^1.0.4",
     "typescript": "^5.8.3",
     "vite": "^6.3.5",
-    "vite-plugin-monkey": "^5.0.3",
-    "nbc-auto-changelog": "^1.0.3"
+    "vite-plugin-monkey": "^5.0.3"
   }
 }
