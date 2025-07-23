@@ -3,12 +3,22 @@
 个人自用模板
 
 ## 安装使用
+
 ```shell
 npm create nbc-app < projectName | 可选 >
 ```
+
 > 当然也可以直接克隆项目
 
+> [!WARNING]
+> 选择 `React@18` 而不是 `React@19` 是因为`React@19`删掉了**umd**，打包时必定打包所有依赖，足足**500KB**!!!
+
+> [!NOTE]
+> `断点调试`依旧只能存在一个相同用户配置的Chrome实例，也就是安装完脚本后必须先关闭浏览器，然后才能正常启动`断点调试`的
+> Chrome
+
 ### 项目简介
+
 - 支持 Tampermonkey、Violentmonkey、Greasemonkey、ScriptCat 等脚本引擎的辅助开发
 - 打包自动注入脚本配置头部注释
 - 当第一次启动或脚本配置注释改变时自动在默认浏览器打开脚本安装
@@ -22,4 +32,5 @@ npm create nbc-app < projectName | 可选 >
 - [更多配置和使用方法...](https://github.com/lisonge/vite-plugin-monkey/blob/main/README_zh.md)
 
 ### 第三方库
+
 - Less - 样式预处理

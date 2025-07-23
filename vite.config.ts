@@ -1,14 +1,15 @@
-import react from '@vitejs/plugin-react';
-import { defineConfig } from 'vite';
-import monkey, { cdn } from 'vite-plugin-monkey';
-import { resolve } from "path";
+import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite'
+import monkey, { cdn } from 'vite-plugin-monkey'
+import { resolve } from 'path'
 
 // 设置使用的浏览器
-process.env.BROWSER = 'chrome';
+process.env.BROWSER = ''
 
 // https://cn.vitejs.dev/config/
 export default defineConfig({
   css: {
+    devSourcemap: true,
     modules: {
       localsConvention: 'dashesOnly',
       generateScopedName: '[local]-[hash:5]'
@@ -31,19 +32,17 @@ export default defineConfig({
         icon: 'https://vitejs.dev/logo.svg',
         namespace: 'vite-tampermonkey-template',
         description: '一个脚本测试模板',
+        author: 'Ni But Crazy',
         match: [
-          '*://www.google.com.hk',
+          '*://www.google.com.hk'
         ],
       },
       build: {
         externalGlobals: {
-          react: cdn.jsdelivr('React', 'umd/react.production.min.js'),
-          'react-dom': cdn.jsdelivr(
-            'ReactDOM',
-            'umd/react-dom.production.min.js',
-          ),
+          'react': cdn.jsdelivr('React', 'umd/react.production.min.js'),
+          'react-dom': cdn.jsdelivr('ReactDOM', 'umd/react-dom.production.min.js')
         },
       },
     }),
   ],
-});
+})
