@@ -37,8 +37,8 @@ export default defineConfig({
         description: '一个脚本测试模板',
         author: 'Ni But Crazy',
         match: [
-          '*://www.google.com',
-          '*://www.google.com*',  // 这种奇妙的语法油猴不适用，但脚本猫(ScriptCat)可以匹配
+          '*://www.google.com.hk',
+          '*://www.google.com.*',  // 这种奇妙的语法油猴不适用，但脚本猫(ScriptCat)可以匹配
         ]
       },
       build: {

@@ -14,18 +14,18 @@
     ]
   },
   "dependencies": {
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
   },
   "devDependencies": {
-    "@types/node": "^24.0.6",
-    "@types/react": "^19.1.1",
-    "@types/react-dom": "^19.1.1",
-    "@vitejs/plugin-react": "^4.4.0",
-    "less": "^4.3.0",
-    "nbc-auto-changelog": "^1.0.4",
-    "typescript": "^5.8.3",
-    "vite": "^6.3.5",
-    "vite-plugin-monkey": "^6.0.0"
+    "@types/node": "^24.9.1",
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2",
+    "@vitejs/plugin-react": "^4.7.0",
+    "less": "^4.4.2",
+    "nbc-auto-changelog": "^1.1.0",
+    "typescript": "^5.9.3",
+    "vite": "7.1.12",
+    "vite-plugin-monkey": "^7.1.4"
   }
 }
