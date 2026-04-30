@@ -25,20 +25,23 @@ export default defineConfig({
     }
   },
   plugins: [
-    react(),
+    react({
+      babel: {
+        plugins: [ 'babel-plugin-react-compiler' ],
+      }
+    }),
     monkey({
       entry: 'src/main.tsx',
       server: {
         prefix: name => `开发版：${ name }.user.js`,
       },
       userscript: {
-        icon: 'https://vitejs.dev/logo.svg',
+        icon: 'https://vite.dev/logo.svg',
         namespace: 'vite-tampermonkey-template',
         description: '一个脚本测试模板',
         author: 'Ni But Crazy',
         match: [
-          '*://www.google.com.hk',
-          '*://www.google.com.*',  // 这种奇妙的语法油猴不适用，但脚本猫(ScriptCat)可以匹配
+          '*://www.google.com',
         ]
       },
       build: {
