@@ -2,7 +2,7 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import App from '@components/App.tsx'
 import s_ from '@styles/App.module.less'
-import '@global/index.global.less'
+import '@shared/styles/global.less'
 
 
 const root = document.createElement('div')

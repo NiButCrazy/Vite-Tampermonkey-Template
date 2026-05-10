@@ -1,4 +1,5 @@
-import react from '@vitejs/plugin-react'
+import react, { reactCompilerPreset } from '@vitejs/plugin-react'
+import babel from '@rolldown/plugin-babel'
 import { defineConfig } from 'vite'
 import monkey from 'vite-plugin-monkey'
 import { resolve } from 'path'
@@ -20,15 +21,14 @@ export default defineConfig({
       '@styles': resolve(__dirname, './src/assets/styles'),
       '@components': resolve(__dirname, './src/components'),
       '@assets': resolve(__dirname, './src/assets'),
-      '@global': resolve(__dirname, './src/global'),
+      '@shared': resolve(__dirname, './src/shared'),
       '@hooks': resolve(__dirname, './src/global')
     }
   },
   plugins: [
-    react({
-      babel: {
-        plugins: [ 'babel-plugin-react-compiler' ],
-      }
+    react(),
+    babel({
+      presets: [ reactCompilerPreset() ]
     }),
     monkey({
       entry: 'src/main.tsx',

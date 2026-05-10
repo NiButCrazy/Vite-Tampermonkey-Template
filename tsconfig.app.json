@@ -24,8 +24,8 @@
       "@assets/*": [
         "./src/assets/*"
       ],
-      "@global/*": [
-        "./src/global/*"
+      "@shared/*": [
+        "./src/shared/*"
       ],
       "@hooks/*": [
         "./src/hooks/*"
